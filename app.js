@@ -18,12 +18,35 @@ app.use(express.static("public"));
 // Load the full build.
 const _ = require('lodash');
 
-//array to store blogs
-let posts = [];
+// to connect with mongoDB
+const mongoose= require("mongoose");
+
+// connect with database
+mongoose.connect("mongodb://localhost:27017/blogDB");
+
+// creating the blog Schema
+const blogSchema = new mongoose.Schema({
+
+  title: String,
+  content: String
+
+})
+// creating the blog model/document
+const Blog = mongoose.model("Blog", blogSchema);
 
 app.get("/", (req, res)=>{
 
-  res.render("home", {homeStartingContent, posts});
+  // fetching all the blogs from database
+  Blog.find({}, (err, posts) =>{
+
+    if(err){
+
+      console.log(err);
+    }else{
+
+      res.render("home", {homeStartingContent, posts});
+    }
+  })
 
 })
 
@@ -53,35 +76,44 @@ app.post("/compose", (req, res)=>{
 
   }
 
-  posts.push(post);
+  Blog.insertMany(post, (err) => {
+
+    if(err){
+
+      console.log(err);
+    }else{
+
+      console.log("successfully added document to database");
+    }
+  })
 
   res.redirect("/");
 
 })
 
 // blog details
-app.get("/blogs/:blogTitle", (req, res)=>{
+app.get("/blogs/:blogId", (req, res)=>{
 
-  let blogTitle = req.params.blogTitle;
+  let blogId = req.params.blogId;
 
+  let blogTitle = "";
   let blogContent = "";
 
-  posts.forEach( (i)=>{
+  Blog.findOne({_id:blogId}, (err, blog) => {
 
-    const temp = _.kebabCase(i.title);
+    if(err){
 
-    if( temp===blogTitle ){
-  
-      console.log("match found !");
+      console.log(err);
+    }else{
 
-      blogContent = i.content;
-      blogTitle = i.title;
+      blogContent = blog.content;
+      blogTitle = blog.title;
+
+      res.render("post", {blogTitle, blogContent});
 
     }
 
   })
-
-  res.render("post", {blogContent, blogTitle});
 
 })
 
