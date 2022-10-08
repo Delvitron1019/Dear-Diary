@@ -61,7 +61,16 @@ nav ul a, nav p {
 }
 
 .navbar-brand, .nav-links{
-
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+@media screen and (max-width:750px) {
+    #home{
+        margin-top: 6rem;
+    }
+    .nav-links{
+        text-align:left;
+        margin-left: 2rem;
+    }
 }
