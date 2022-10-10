@@ -12,7 +12,7 @@
     <img src="https://github.com/abhinavkashyap061/Dear-Diary/blob/main/readme-assets/createpage-preview.jpg?raw=true" alt="Blog Create Page">
 </p>
 
-### Setting up
+### 🚀 Setting up:
 
 - In order to run the application on your local machine, follow the steps given below:
 
