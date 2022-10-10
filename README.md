@@ -6,7 +6,7 @@
     <img src="https://github.com/abhinavkashyap061/Dear-Diary/blob/main/readme-assets/homepage-preview.jpg?raw=true" alt="Blog Home Page">
 </p>
 
-- **Create your own blog entry** by going to https://blog-abhinavkashyap061.herokuapp.com//compose 
+- **Create your own blog entry** by going to https://blog-abhinavkashyap061.herokuapp.com/compose 
 
 <p align="center"> 
     <img src="https://github.com/abhinavkashyap061/Dear-Diary/blob/main/readme-assets/createpage-preview.jpg?raw=true" alt="Blog Create Page">
