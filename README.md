@@ -19,7 +19,6 @@
 - https://blog-abhinavkashyap061.herokuapp.com/
 
 ### 🚀 Setting up:
-
 - In order to run the application on your local machine, follow the steps given below:
 
 1. Install Node.js from [https://nodejs.org/en/] 
@@ -44,5 +43,3 @@
    ```
    This runs the application in the development mode.\
    Open [http://localhost:8080](http://localhost:8080) to view it in the browser.
-
-   You will also see any lint errors in the console.
