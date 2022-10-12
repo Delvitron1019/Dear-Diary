@@ -12,6 +12,12 @@
     <img src="https://github.com/abhinavkashyap061/Dear-Diary/blob/main/readme-assets/createpage-preview.jpg?raw=true" alt="Blog Create Page">
 </p>
 
+### 🛠 Tech Stack:
+- **Node.js**, **Express.js**, **EJS**, and **MongoDB**
+
+### 🕹 Live Project:
+- https://blog-abhinavkashyap061.herokuapp.com/
+
 ### 🚀 Setting up:
 
 - In order to run the application on your local machine, follow the steps given below:
@@ -40,9 +46,3 @@
    Open [http://localhost:8080](http://localhost:8080) to view it in the browser.
 
    You will also see any lint errors in the console.
-
-### 🛠 Tech Stack:
-- **Node.js**, **Express.js**, **EJS**, and **MongoDB**
-
-### 🕹 Live Project:
-- https://blog-abhinavkashyap061.herokuapp.com/
