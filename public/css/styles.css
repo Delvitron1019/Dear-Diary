@@ -42,6 +42,9 @@
     justify-content: center;
     background-color: #1f2833;
 }
+.socials{
+    margin-top: 10px;
+}
 
 .fab {
     font-size: 25px;
@@ -49,7 +52,8 @@
     text-align: center;
     text-decoration: none;
     background: white;
-    color: rgb(76, 104, 215);
+    /* color: rgb(76, 104, 215); */
+    color: #0CBABA;
   }
   
   .fab:hover {
@@ -104,7 +108,8 @@ nav ul a, nav p {
     height: 1px;
     bottom: 0;
     left: 0;
-    background-color: #1abc9c;
+    /* background-color: #1abc9c; */
+    background-color: #0CBABA;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
@@ -132,10 +137,12 @@ nav ul a, nav p {
     text-transform: uppercase;
     background-image: linear-gradient(
     -225deg,
-    #18ea37 0%,
-    #2cb5a9 29%,
-    #398a21 67%,
-    #128cbc 100%
+    /* #18ea37 0%, */
+    #380036 0%,
+    /* #2cb5a9 29%, */
+    /* #398a21 67%, */
+    /* #128cbc 100% */
+    #0CBABA 100%
     );
     background-size: auto auto;
     background-clip: border-box;
