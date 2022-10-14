@@ -23,7 +23,11 @@ const _ = require("lodash");
 const mongoose = require("mongoose");
 
 // connect with database
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect(process.env.MONGO_URI).then(()=>{
+  console.log("connection successful")
+}).catch((err)=>{
+  console.log(err)
+})
 
 // creating the blog Schema
 const blogSchema = new mongoose.Schema({
