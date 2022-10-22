@@ -9,7 +9,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="icon" href="https://media.discordapp.net/attachments/1013136431138488361/1029980418587500544/dear-diary-logo.png?width=684&height=513">
+  
   <nav class="navbar navbar-default">
+    <button  id="changemode">
+      <div class="theme-container shadow-light">
+        <img class="img shadow-dark" src="https://www.uplooder.net/img/image/2/addf703a24a12d030968858e0879b11e/moon.svg" alt="">
+      </div>
+    </button>
     <div class="container">
       <p class="navbar-brand">DEAR DIARY</p>
       <ul class="nav navbar-nav navbar-right">
@@ -22,4 +28,54 @@
   </nav>
 
 <body>
-  <div class="container">
+  <script>
+    const sun = "https://www.uplooder.net/img/image/55/7aa9993fc291bc170abea048589896cf/sun.svg";
+ const moon = "https://www.uplooder.net/img/image/2/addf703a24a12d030968858e0879b11e/moon.svg"
+     document.getElementById("changemode").addEventListener('click',(e)=>{
+       const container = document.getElementsByClassName("theme-container")[0]
+       console.log(container)
+         var btn=document.getElementsByClassName('img')[0];
+        
+            if(btn.src===sun){
+             btn.src=moon;
+             container.classList.remove("shadow-light");
+             container.classList.add("shadow-dark");
+            }
+            else{
+             btn.src=sun;
+             container.classList.remove("shadow-dark");
+             container.classList.add("shadow-light");
+            }
+         
+         var body= document.getElementsByTagName("body");
+         for (i = 0; i < body.length; i++) {
+         body[i].classList.toggle("white");
+         }     
+         var navbar = document.getElementsByClassName("navbar");
+         for (i = 0; i < navbar.length; i++) {
+         navbar[i].classList.toggle("navwhite");
+         } 
+         var foot=document.getElementsByClassName("footer");
+         var navbar = document.getElementsByClassName("navbar");
+         for (i = 0; i < foot.length; i++) {
+         foot[i].classList.toggle("footwhite");
+        } 
+        
+        var hd = document.getElementsByTagName("h1");
+        for (i = 0; i < hd.length; i++) {
+        hd[i].classList.toggle("white");
+        } 
+        var hd = document.getElementsByTagName("h2");
+        for (i = 0; i < hd.length; i++) {
+        hd[i].classList.toggle("white");
+        } 
+        var hd = document.getElementsByTagName("h3");
+        for (i = 0; i < hd.length; i++) {
+        hd[i].classList.toggle("white");
+        } 
+        var p=document.getElementsByTagName("p");
+        for (i = 0; i < p.length; i++) {
+        p[i].classList.toggle("pwhite");
+        } 
+    })
+  </script>
